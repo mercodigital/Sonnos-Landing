@@ -86,6 +86,10 @@
 
  ***/
  
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin:0px;
 	padding:0px;
@@ -3194,7 +3198,7 @@ body.visible-menu-bar .fullscreen-menu{
 	top:0px;
 	height:100%;
 	width:0%;
-	background-color:#000000;
+	background-color:#00000000;
 	transition: all 900ms ease;
     -moz-transition: all 900ms ease;
     -webkit-transition: all 900ms ease;

@@ -25,7 +25,71 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
+<style>
 
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 960px;
+  min-width: 300px;
+}
+.slider::before, .slider::after {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: -webkit-box;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+</style>
 <body class="hidden-bar-wrapper">
 
 <div class="page-wrapper">
@@ -87,15 +151,12 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 									<li><a href="#primer-paso"style="font-family: 'MonumentExtended-Ultrabold'">POR QUE SONNOS?</a></li>
 									<li class="dropdown"><a  style="font-family: 'MonumentExtended-Ultrabold'">SOLUCIONES</a>
 										<ul>
-											<li><a  style="font-family: 'MonumentExtended-Ultrabold'">MAQUINAS</a></li>
-											<li><a  style="font-family: 'MonumentExtended-Ultrabold'">PRODUCTOS</a></li>
-											<li><a  style="font-family: 'MonumentExtended-Ultrabold'">DISTRIBUIDORES</a></li>
-											<li><a  style="font-family: 'MonumentExtended-Ultrabold'">SOLUCIONES AVANZADAS</a></li>
-											<li><a  style="font-family: 'MonumentExtended-Ultrabold'">NUEVOS PROYECTOS</a></li>
-											<li><a  style="font-family: 'MonumentExtended-Ultrabold'">HOMOLOGACION FAB</a></li>
+											<li><a href="#maquinas" style="font-family: 'MonumentExtended-Ultrabold'">MAQUINAS</a></li>
+											<li><a  href="#productos"  style="font-family: 'MonumentExtended-Ultrabold'">PRODUCTOS</a></li>
+											<li><a  href="#soluciones"  style="font-family: 'MonumentExtended-Ultrabold'">SOLUCIONES AVANZADAS</a></li>
+											<li><a  href="#homologacion"  style="font-family: 'MonumentExtended-Ultrabold'">HOMOLOGACIÓN FAB</a></li>
 										</ul>
 									</li>
-									<li><a href="https://www.sonnosweb.com/"style="font-family: 'MonumentExtended-Ultrabold'">TIENDA</a></li>
 									<li><a href="#contact" style="font-family: 'MonumentExtended-Ultrabold'">CONTACTO</a></li>
 								</ul>
 							</div>
@@ -245,7 +306,7 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<span class="icon"><img data-savepage-currentsrc="#images/icons/price-2-icon.svg" data-savepage-src="images/icons/price-2-icon.svg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MC44NzUiIGhlaWdodD0iNjUuNjI1IiB2aWV3Qm94PSIwIDAgOTAuODc1IDY1LjYyNSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgICAgb3BhY2l0eTogMC43OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0icHJpY2UtMi1pY29uLnN2ZyIgY2xhc3M9ImNscy0xIiBkPSJNODY0LjQ1Niw2NTguN2MtMC4zMTYtMS42MzUtLjg2Ni0zLjIwNS0yLjUzNC0zLjlhOS44NDcsOS44NDcsMCwwLDAtMy40MjYtLjRjLTEuNjA3LS4wNTQtMy4yMDYtMC4wODItNC44MTEtMC4wMjEtMC4zNzktMS4wMzUtLjc4OC0yLjA1OS0xLjE2LTMuMS0xLjY3Mi00LjY2Mi0zLjMyNS05LjM1Mi00LjYzOC0xNC4xMjgtMS4xMzQtNC4xMjQtMi44MzEtOC4yOC0zLjc1LTEyLjQyNiwzLjE2MS0uMzQ4LDYuMzIxLTAuNyw5LjQ3NC0xLjEwOSwzLjAzOC0uNCw4LjMzOC0wLjE2OCw4LjAzOC00LjI2MS0wLjI2My0zLjU4Mi0yLjExMy00LjMwOC00LjQ4NC00LjIzMS0wLjc2LTIuOTQxLTIuNTMtMTEuMjg1LTYuMjA2LTEwLjktMi4yMjcuMjI5LTUuNjYyLDMuNzIyLTcuNDksNC45YTExNS4zMzgsMTE1LjMzOCwwLDAsMC0xMS41MTEsOC4xNzYsMC45OTMsMC45OTMsMCwwLDAtLjIyOC4yODhjLTEuMDIxLjA4NS0yLjA0NiwwLjE2Ny0zLjA2NSwwLjI1OC04LjIuNzQ0LTE2LjQzNiwxLjQyOC0yNC42MTYsMi4zNjMtMy4zOTEuMzg3LTcuOCwwLjIyNy03LjMzNSw0LjU0NnMzLjc5MiwzLjk5MSw3LjI4LDMuODExcTEzLjQ1OS0uNjksMjYuODM4LTIuMzI2YTAuOTMyLDAuOTMyLDAsMCwwLC4wMzMuMjJjMy40MjIsOS4yNjksNi42LDE4LjYzMiw5LjcxMSwyOC4wMDgtMjAuMS4zMTEtNDAuMjQ5LS41ODYtNjAuMzE1LDEtNS40MjguNDI4LTcuMDY1LDEuMzgzLTYuMzI2LDcuMTY5LDAuNDYyLDMuNjEsMi4zNzMsMy45MTUsNS45MTcsNCwwLjgwOSwwLjAyLDEuNjE4LjAyNCwyLjQyNiwwLjA0M2ExLjA0MiwxLjA0MiwwLDAsMC0uMDkxLjI5NGMtMC40LDMuODQzLDUuMTM4LDIuNzQzLDcuNTIsMi42NzYsMS4zNTQtLjAzOCwzLjY2Ni4zNzIsNC44ODktMC4yNjlhMi43MjgsMi43MjgsMCwwLDAsMS4wODItMi40NjhjMTYuMjc1LDAuMTg2LDMyLjU2Mi4xMDgsNDguODMsMC4yMWE0Ljk3OSw0Ljk3OSwwLDAsMCwxLjMsMS42MjVjMi4wNTQsMS41LDkuMjY1LDEuMzQzLDExLjE3Ny4xNjlhMi4xODIsMi4xODIsMCwwLDAsMS4xNjItMi41NmMyLjAzMS0uMDgyLDMuODYyLTAuMjkyLDUuMjc3LTIuMDQ1QTYuNDUyLDYuNDUyLDAsMCwwLDg2NC40NTYsNjU4LjdabS0xNS4wMDgtNTEuMDU0YzAuMjI3LS4xNiwxLjQxNC0xLjMzOCwxLjc0Ny0xLjI2NiwwLjU5LDAuMTI1LDEuMTQzLDEuOTMyLDEuNDYxLDIuNTQ0YTMyLjg0MiwzMi44NDIsMCwwLDEsMi40MTMsNi40MTZjLTAuNzY5LjEwOS0xLjU1OSwwLjIzOS0yLjM0MSwwLjMzNC01Ljc2My43MDctMTEuNiwxLjE1My0xNy40MTMsMS42MkM4MzkuODQzLDYxMy44MTYsODQ0Ljc2Nyw2MTAuOTMsODQ5LjQ0OCw2MDcuNjQ4Wm0tNTAuNSwxNy4yNzJjLTAuODIyLTMuNDI0LDExLjUxMy0zLjIyMiwxNC4xNzUtMy40OTQsNS40ODQtLjU1NywxMC45NjUtMS4xMDcsMTYuNDU2LTEuNjA1LDQuODgtLjQ0NSw5LjcyNC0xLjE5NCwxNC42MjQtMS40MjQsMi4yNzctLjEwNiw0LjUzNC0wLjIyMiw2LjgtMC40NzMsMS4zMTYtLjE0NSw2LjUtMS41ODEsNy43MTctMC42MSwzLjExNSwyLjQ4NS0yLjM1OSwzLjg4OC0zLjgzNSw0LjEtMi43MjcuMzktNS40NjgsMC43LTguMjA1LDEtNS4wNDQuNTY3LTEwLjA5MSwxLjA4NC0xNS4xMjgsMS43cS04LjQsMS4wMzktMTYuODM0LDEuNzE1QzgxMS44MjEsNjI2LjA2Myw3OTkuNzQsNjI4LjIwNiw3OTguOTUyLDYyNC45MlptLTYuMjYxLDQyLjYwOWEyNC41NDIsMjQuNTQyLDAsMCwxLTIuOTg0LjA4NmMtMC42NzguMDE5LTUuNTc2LDAuNTQ5LTUuNDU0LS42MzJhMC45NDcsMC45NDcsMCwwLDAtLjAyNy0wLjI2MWMzLjEzNCwwLjA2NSw2LjI2OC4xMjYsOS40LDAuMTY1Qzc5My42MTEsNjY3LjM2LDc5My40MDYsNjY3LjQxNSw3OTIuNjkxLDY2Ny41MjlabS01LjYzNy0yLjg1N2E3MS42MTQsNzEuNjE0LDAsMCwxLTgtLjA4Yy0zLjA1NS0uMzgtMi45ODQtMC41NzgtMy4xMzktMi44NTQtMC4xMjctMS44NTgtLjI0MS0yLjcxLDEuMjUxLTMuNjg0LDIuNzI3LTEuNzgyLDkuODQyLTEsMTMuMTUyLTEuMTM5LDE2Ljk3MS0uNzIyLDMzLjk2My0wLjExNiw1MC45NDMtMC40LDAuMTU0LDAuNDY2LjMxNSwwLjkzLDAuNDY5LDEuNCwwLjU2MiwxLjcsMS4wMjgsNC42ODUsMS44NzQsNy4xNzFRODE1LjMyOSw2NjQuOSw3ODcuMDU0LDY2NC42NzJabTYzLjQyOCwyLjY5NWMtMy4xLS4yOTMtMy44OS0xLjItNC43NzctMy45NDItMC44OTItMi43NjMtMS44MTQtNS41MTctMi43MzItOC4yN2EwLjgxOCwwLjgxOCwwLDAsMC0uMDM2LTAuMTA5Yy0wLjQxNC0xLjI0NS0uODE2LTIuNDk0LTEuMjM0LTMuNzM4LTIuODQzLTguNDYyLTUuNzIzLTE2LjkxNy04LjgxNC0yNS4yOTMsMy4wNjYtLjM2NSw2LjEzNC0wLjcsOS4yLTEuMDRhMC45ODIsMC45ODIsMCwwLDAsMCwuMTA4YzAuNzIyLDMuMzUyLDIuMyw2LjQ4LDMuMDg4LDkuODM2LDAuOCwzLjQyNiwxLjg4LDYuNzg3LDIuOTkyLDEwLjEyNSwxLjIwOSwzLjYyOCwyLjUsNy4yMjYsMy44MjksMTAuODEyYTAsMCwwLDAsMCwwLDBjMC4wOTMsMC4yNTMuMTgzLDAuNTA3LDAuMjc2LDAuNzYsMC44MTUsMi4xOTUsMy43NjYsNi44NzgsMy41MTEsOS4xODVDODU1LjU4LDY2Ny43MjcsODUyLjM0OCw2NjcuNTQ0LDg1MC40ODIsNjY3LjM2N1ptMTEuNjM0LTQuNzQ2Yy0xLjA2MywxLjc1Ni0yLjg3NSwxLjY3MS00LjY4MywxLjcyNy0wLjA2Mi0uMTUxLTAuMTI1LTAuMy0wLjE4NS0wLjQ1My0wLjk2OS0yLjQ4LTEuODc1LTQuOTg1LTIuOC03LjQ4MSwxLjM1LS4wMjYsMi43LTAuMDA4LDQuMDUxLjAzOSwxLjgyNCwwLjA2MiwzLjIzMS0uMDcxLDMuNzc5LDEuODkyQTUuMzc4LDUuMzc4LDAsMCwxLDg2Mi4xMTYsNjYyLjYyMVpNODQwLjg1Nyw2MzIuNzVjLTAuNDQtMS4yMzMtMi40MzctLjctMS45OTIuNTQzLDMuMDYsOC41NzIsNS43MiwxNy4yNzgsOC45MjEsMjUuOCwwLjQ2LDEuMjIzLDIuNDU4LjY5NCwxLjk5My0uNTQyQzg0Ni41NzcsNjUwLjAyOSw4NDMuOTE3LDY0MS4zMjIsODQwLjg1Nyw2MzIuNzVabS0yNi4yNDIsNS43MjVhMS4wMjIsMS4wMjIsMCwwLDAsMC0yLjA0NGMtNS4yMTcsMC0xMC40MzEtLjItMTUuNjQ4LTAuMjA1YTEuMDIzLDEuMDIzLDAsMCwwLDAsMi4wNDZDODA0LjE4NCw2MzguMjgxLDgwOS40LDYzOC40NzgsODE0LjYxNSw2MzguNDc1Wm0tMjUuOTMzLS4xYzEuMTkxLDAuMDIsMi4zODItLjAxOSwzLjU3MywwYTEuMDIyLDEuMDIyLDAsMCwwLDAtMi4wNDRjLTEuMTkxLS4wMTktMi4zODIuMDIxLTMuNTczLDBBMS4wMjIsMS4wMjIsMCwwLDAsNzg4LjY4Miw2MzguMzczWm0tMC40MjcsOC41OTRjNy41LS40MTcsMTUuMTE0LjAyOCwyMi42MzctMC4xMjNhMS4wMjMsMS4wMjMsMCwwLDAsMC0yLjA0NWMtNy41MjMuMTUzLTE1LjEzNi0uMjkzLTIyLjYzNywwLjEyNUM3ODYuOTMzLDY0NSw3ODYuOTI0LDY0Ny4wNDEsNzg4LjI1NSw2NDYuOTY3Wm0zNy41ODgsMC4wODhjMS4zMjYsMC4xLDEuMzE5LTEuOTQzLDAtMi4wNDQtMi45ODMtLjIyNy01Ljk3NC0wLjAxNy04Ljk2MS0wLjA1NWExLjAyMywxLjAyMywwLDAsMCwwLDIuMDQ1QzgxOS44NjksNjQ3LjAzOCw4MjIuODYsNjQ2LjgyOSw4MjUuODQzLDY0Ny4wNTVabS00Ni44NzMtLjA3NGEyMS41OTIsMjEuNTkyLDAsMCwxLDMuOCwwYzEuMzI0LDAuMTE2LDEuMzE2LTEuOTI3LDAtMi4wNDVhMjEuNTkyLDIxLjU5MiwwLDAsMC0zLjgsMEM3NzcuNjU2LDY0NS4wNTMsNzc3LjY0NCw2NDcuMSw3NzguOTcsNjQ2Ljk4MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NzMuNzgxIC02MDQuMjE5KSIvPgo8L3N2Zz4K" alt="" class="mCS_img_loaded"></span>
 							</div>
 							
-							<div class="price">Personalizacion</div>
+							<div class="price">Personalización </div>
 							<ul class="price-list">
 								<p>Uno de los integrantes del equipo comercial será tu asesor personal para guiarte ante las consultas que necesités hacer y proponiéndote la mejor opción de productos para tu proyecto.</p>
 							</ul>
@@ -277,6 +338,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 			</div>
 
 		</section>
+
+
 		<img src="images/clientes.png" alt="" style="width: 100%; height:auto">
 		<!-- End Pricing Section -->
 
@@ -298,6 +361,54 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 		</section> -->
 		<!-- End Testimonial Section -->
 		<div style="background-color: #fff;">
+<!-- 
+					
+<div class="slider" style="margin-top: 100px">
+	<div class="slide-track">
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/acasalud.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/obarrio.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/thonet.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/falabella.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/cabify.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/gama.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/pointer.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/plavicon.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/kiddy.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/asteroptica.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/followme.png"  alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/ledesma.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/telekino.png"   alt="" />
+	  </div>
+	  <div class="slide">
+		<img src="https://mercodigital.com/images/multipoint.png"   alt="" />
+	  </div>
+	</div>
+  </div> -->
 		<!-- Services Section -->
 		<section class="services-section">
 			<div class="outer-container">
@@ -477,6 +588,7 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 
 				</div> -->
 				<div class="row clearfix">
+					<a name="maquinas"></a>					
 					
 					<!-- Pricing Block -->
 					<div class="price-block col-lg-7 col-md-7 col-sm-12">
@@ -500,18 +612,70 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 							
 							<h4 style="margin-bottom: -20px; 	color: transparent;
 							-webkit-text-stroke-width: 3px;
-							-webkit-text-stroke-color: #757575; text-align: left;">MÁQUINAS   </span></h4>							
+							-webkit-text-stroke-color: #757575; text-align: left;">MÁQUINAS   </span></h4>	
 							<ul class="price-list" style=" text-align: left;">
 								<p>Si estás proyectando iniciar, ampliar o sumar máquinas de musculación a tu negocio, es que creamos M1G (Mi Primer Gimnasio). Te asesoramos en función del espacio disponible o la inversión destinada al proyecto.</p>
-								<img src="/images/modulo6/M1G_claim.png" alt="">
+						
 							</ul>
 
-						
+							<div class="icon-box" style="zoom: 50%;">
+								<img src="images/modulo6/M1G_claim.png" alt="">
+							</div>
+							<div class="btns-box" style="margin-top: 30px">
+								<div class="theme-btn btn-style-one" ><span class="txt"><a href="#primer-paso" style="color: white;"> Volver</a></span> </div>
+								<div class="theme-btn btn-style-one" ><span class="txt"><a href="#homologacion" style="color: white;"> Mas Info</a></span> </div>
+							</div>
 						</div>
 						</div>
 					</div>
 					
 
+					
+				</div>
+
+				<div class="row clearfix">
+					
+
+					<a name="homologacion"></a>					
+					
+					<!-- Pricing Block -->
+					<div class="price-block col-lg-5 col-md-5 col-sm-12">
+						<div style="transform: scale(1.0)" >
+						<div class="side-text"></div>
+						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;">
+
+							
+							<h4 style="margin-bottom: -20px; 	color: transparent;
+							-webkit-text-stroke-width: 3px;
+							-webkit-text-stroke-color: #757575; text-align: left;">HOMOLOGACIÓN   </span></h4>		
+							<ul class="price-list" style=" text-align: left;">
+								<p>Como resultado de la inversión en el desarrollo y testeos de los productos, la Federación Argentina de Box (FAB), evaluó y consideró a SONNOS como la única marca en el país que cumple con los máximos estándares de calidad boxística a nivel mundial.
+								</p>
+						
+							</ul>
+							<div class="icon-box" style="zoom: 50%;">
+								<img src="images/modulo6/FAB.png" alt="">
+							</div>
+							<div class="btns-box" style="margin-top: 30px">
+								<div class="theme-btn btn-style-one" ><span class="txt"><a href="#maquinas" style="color: white;"> Volver</a></span> </div>
+								<div class="theme-btn btn-style-one" ><span class="txt"><a href="#soluciones" style="color: white;"> Mas Info</a></span> </div>
+							</div>
+						</div>
+						</div>
+					</div>
+					
+					<!-- Pricing Block -->
+					<div class="price-block col-lg-7 col-md-7 col-sm-12">
+						<div style="transform: scale(1.2)" >
+						  <div class="side-text" ></div>
+						  <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;" >
+							  <div class="icon-box" >
+								  <img src="images/modulo6/HOMOLOGACION.png" alt="">
+							  </div>
+  
+						  </div>
+						</div>
+					  </div>
 					
 				</div>
 
@@ -522,6 +686,139 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 
 
 			</div>
+			<div class="auto-container">
+				<!-- 				<div class="sec-title centered">
+									<div class="text" style="font-size: 19pt; color:#fff">Es momento de que te sumes a la familia SONNOS</div>
+				
+											<h3 style="margin-bottom: 20px; color: #fff; 	-webkit-text-stroke-width: 0px;">Da el primer paso para que tu
+												negocio despegue… 
+												 <span style="display: inline; color: rgb(255, 0, 0)"> ¿Por qué SONNOS?								</span></h3>
+				
+								</div> -->
+								<div class="row clearfix">
+							<a name="soluciones"></a>					
+									
+									<!-- Pricing Block -->
+									<div class="price-block col-lg-7 col-md-7 col-sm-12">
+									  <div style="transform: scale(1.2)" >
+										<div class="side-text" ></div>
+										<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;" >
+											<div class="icon-box" >
+												<img src="images/modulo6/SOLUCIONES_DEPORTIVAS.png" alt="">
+											</div>
+				
+										</div>
+									  </div>
+									</div>
+									
+									<!-- Pricing Block -->
+									<div class="price-block col-lg-5 col-md-5 col-sm-12">
+										<div style="transform: scale(1.0)" >
+										<div class="side-text"></div>
+										<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;">
+				
+											
+											<h4 style="margin-bottom: -20px; 	color: transparent;
+											-webkit-text-stroke-width: 3px;
+											-webkit-text-stroke-color: #757575; text-align: left;">SOLUCIONES DEPORTIVAS   </span></h4>
+											<ul class="price-list" style=" text-align: left;">
+												<p><strong>SDB Productos </strong>  Es el asesoramiento para la adquisición de productos de alguna de nuestras líneas: deporte, fitness, cardio, musculación, suplementación, e indumentaria.
+												</p>
+												<p><strong>SDB Servicios  </strong>Conecta el proyecto de nuestros clientes con un formato “llave en mano” de resolución integral desde 5 perspectivas: asesoramiento, planificación, prototipación, implementación y mentoría comercial
+												</p>
+										
+											</ul>
+				
+
+											<div class="btns-box" style="margin-top: 30px">
+												<div class="theme-btn btn-style-one" ><span class="txt"><a href="#homologacion" style="color: white;"> Volver</a></span> </div>
+												<div class="theme-btn btn-style-one" ><span class="txt"><a href="#productos" style="color: white;"> Mas Info</a></span> </div>
+											</div>
+										</div>
+										</div>
+									</div>
+									
+				
+									
+								</div>
+				
+								<div class="row clearfix">
+									
+									<a name="productos"></a>					
+				
+									
+									<!-- Pricing Block -->
+									<div class="price-block col-lg-5 col-md-5 col-sm-12">
+										<div style="transform: scale(1.0)" >
+										<div class="side-text"></div>
+										<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;">
+				
+											
+											<h4 style="margin-bottom: -20px; 	color: transparent;
+											-webkit-text-stroke-width: 3px;
+											-webkit-text-stroke-color: #757575; text-align: left;">PRODUCTOS   </span></h4>	
+							<a name="productos"></a>					
+
+											<ul class="price-list" style=" text-align: left; color: black;">
+												<p>Desarrollamos variadas líneas de productos en función de los distintos perfiles de negocios, y es por esto que en SONNOS podés encontrar productos de:</p>
+												<li style=" text-align: left; color: black;"">
+													Fitness
+												</li>
+
+												<li style=" text-align: left; color: black;">
+													Musculación
+												</li>
+
+												<li style=" text-align: left; color: black;">
+													Boxeo
+												</li>
+
+												<li style=" text-align: left; color: black;">
+													Funcional
+												</li>
+
+
+												<li style=" text-align: left; color: black;">
+													Máquinas
+												</li>
+
+												<li style=" text-align: left; color: black;">
+													Jaulas
+												</li>
+
+											</ul>
+
+											<div class="btns-box" style="margin-top: 30px">
+												<div class="theme-btn btn-style-one" ><span class="txt"><a href="#soluciones" style="color: white;"> Volver</a></span> </div>
+												<div class="theme-btn btn-style-one scroll-to-target" data-target=".contact-section"><span class="txt">Mas Info</span> </div>
+											</div>
+										</div>
+										</div>
+									</div>
+									
+									<!-- Pricing Block -->
+									<div class="price-block col-lg-7 col-md-7 col-sm-12">
+										<div style="transform: scale(1.2)" >
+										  <div class="side-text" ></div>
+										  <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;" >
+											  <div class="icon-box" >
+												  <img src="images/modulo6/PRODUCTOS.png" alt="">
+											  </div>
+				  
+										  </div>
+										</div>
+									  </div>
+									
+								</div>
+				
+				
+				
+				
+				
+				
+				
+							</div>
+			
 
 		</section>
 
@@ -536,12 +833,9 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 	<div class="footer-column col-lg-6 col-md-6 col-sm-12" style="margin-top:200px ; text-align: center">
 		<div class="footer-widget logo-widget">
 			<div class="logo">
-				<div class="logo"><a href="index.html"><img style="transform: scale(6.5); display: flex; flex-direction:column; justify-content:center; align-content:center; align-items:center;" src="images/logo.png" alt="" title=""></a></div>
+				<div class="logo"><a href="index.html"><img style="transform: scale(6.5); display: flex; flex-direction:column; justify-content:center; align-content:center; align-items:center;" src="images/logo-fight.png" alt="" title=""></a></div>
 			</div>
 			<!-- Footer Mobile Logo -->
-			<div class="footer-mobile-logo">
-				<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-			</div>
 			<ul class="info-list" style="margin-top: 50px;">
 				<li><span>Dirección:</span> <br> Florencio Varela 1759, Ramos Mejía.</li>
 				<li><span>Teléfonos:</span> <br>
@@ -633,7 +927,7 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 	<!--End pagewrapper-->
 	
 	<!--Scroll to top-->
-	<div class="scroll-to-top scroll-to-target"  style="display: block; background-color: #25D366;"> <a style="color: #fff;" target="_blank" href="https://api.whatsapp.com/send?phone=5491133982318&text=Hola!"><span class="fa fa-whatsapp"></span></a> </div>
+	<div class="scroll-to-top scroll-to-target"  style="display: block; background-color: #25D366;"> <a style="color: #fff;" target="_blank" href="https://api.whatsapp.com/send?phone=5491164586036"><span class="fa fa-whatsapp"></span></a> </div>
 	
 	<!-- Purchase Popup -->
 	<div id="purchase-popup" class="purchase-popup">
