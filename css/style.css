@@ -97,6 +97,10 @@ html {
 	outline:none;
 }
 
+.content h4 {
+	font-size: 19pt!important;
+	}
+
 /*** 
 
 ====================================================================
@@ -120,6 +124,10 @@ html {
 	.service-block .inner-box {
 		margin: 0 auto;
 		width: 100%!important;
+		height: 100%!important;
+	}
+	.content h4 {
+	font-size: 15pt!important;
 	}
 	.hidemobile {
 	  display: none;

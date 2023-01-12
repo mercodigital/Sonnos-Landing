@@ -88,18 +88,18 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
+  height: 200px;
   margin: auto;
   overflow: hidden;
   position: relative;
-  max-width: 960px;
+  max-width: 90%;
   min-width: 300px;
 }
 .slider::before, .slider::after {
   background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 100px;
+  height: 200px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -122,8 +122,13 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
   width: calc(250px * 14);
 }
 .slider .slide {
-  height: 100px;
+  height: 200px;
   width: 250px;
+  margin-bottom: 200px;
+}
+
+.slide {
+	padding: 30px;
 }
 
 </style>
@@ -333,7 +338,7 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 						<div class="side-text"></div>
 						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;">
 							<div class="icon-box">
-								<span class="icon"><img data-savepage-currentsrc="#images/icons/price-1-icon.svg" data-savepage-src="images/icons/price-1-icon.svg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MS4wMzEiIGhlaWdodD0iNTAuNjI1IiB2aWV3Qm94PSIwIDAgOTEuMDMxIDUwLjYyNSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgICAgb3BhY2l0eTogMC43OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0icHJpY2UtMS1pY29uLnN2ZyIgY2xhc3M9ImNscy0xIiBkPSJNNzEzLjYxOCw2MzguMTljLTAuMDU3LS43ODYtMC4xNjYtMS41NjUtMC4xODgtMi4zNTEtMC4wMjUtLjkuMTY4LTEuODQ1LTAuNDEtMi42MDUtMC45MzYtMS4yMjktMi42MzEtMS4wNjItNC4wNTQtMS4wMzEtMC4wNDEtMi4wNi0uMDg1LTQuMTItMC4wODYtNi4xODIsMC0xLjQxOC40OC0zLjg0Ny0uNC01LjExMS0xLjQzNC0yLjA3NC01LjY1My0xLjgxNC04LjE3Ny0xLjg4Mi0wLjAyMy0uMzQ4LTAuMDE4LTAuNy0wLjA0OS0xLjA0Ny0wLjQ2Ny01LjMxNC0zLjM4NS02LjE0NS04LjUzNy02LjE4NS01LjY5LS4wNDItNy4xNjksMS45NDctNy41NjQsNy40NjgtMC4zMTIsNC4zNTYtLjQyMyw4Ljc0OC0wLjQ4OSwxMy4xMzQtNS40MjguNDQ1LTExLjIzNi0uMTgxLTE2LjY5MS0wLjExNi00LjY4MS4wNTUtOS4zOTIsMC4wODUtMTQuMDc0LDAuMjYzLTAuMDY3LTQuMzQ4LS4xOTEtOC43LTAuNS0xMy4wMTYtMC4zODgtNS40NzEtMS44NjItNy41MS03LjU2NS03LjQ2OS0zLjk3NiwwLTguMDU3LjM3Ny04LjU3Myw0Ljg2MS0wLjA5Ljc4Ny0uMTU0LDEuNTgtMC4yLDIuMzc5LTIuNDg0LjA0Ni02LjM2NS0uMTY0LTcuODEsMS42NDYtMS44NDQsMi4zMDYtLjk5Myw4LjQyOS0xLjAxNCwxMS4xMjUsMCwwLjA5MiwwLC4xOTIsMCwwLjI4NmE4LjUsOC41LDAsMCwwLTMuMzk0LjI0OWMtMS42NzMuNy0xLjA1MSwzLjUxOS0xLjAzNSw0LjkyNywwLjAxNywxLjQ2MS0uNTE0LDMuNzk0LDEuMzM1LDQuMTgyYTEyLjIxNSwxMi4yMTUsMCwwLDAsMi44OTIuMiw0MC44NjUsNDAuODY1LDAsMCwwLC45NzMsOS44NmMwLjk2MiwzLjc2OCw0LjYxNiwzLjc1MSw4LjE3MywzLjgyMSwwLjAzMiwwLjQ4NS4wMzQsMC45ODQsMC4wNzYsMS40NjMsMC40MjIsNC43NjgsMy4wNiw1LjA4NCw3LjMyNCw1LjE1NCwyLjcxMywwLjA0Niw2Ljk4OC45ODYsOC41Ny0xLjcxMiwwLjkzNC0xLjU5My43MzctNC4zNjIsMC43OTUtNi4xMzcsMC4xMjMtMy44MTcuMDkxLTcuNjQzLDAuMDU4LTExLjQ2MiwwLS4zMDUsMC0wLjYxMS0wLjAwNy0wLjkxNSwxMC4xNjItLjExOSwyMC40MTYuMzgxLDMwLjU1Ny0wLjE1My0wLjAzNywzLjQxMy0uMDQ5LDYuODI5LjAxMiwxMC4yNDIsMC4wNCwyLjIwNy0uMzMxLDUuMDE0LjM4OSw3LjEyLDEuMjI5LDMuNiw1LjUxMSwyLjgsOC43MjMsMi43NTQsMy42MjgtLjA1NSw2LjY0NS4xNzksNy41LTMuOTY0YTE2LjkzMiwxNi45MzIsMCwwLDAsLjMwNy0yLjY1NmMzLjM3OS0uMDY2LDcuMDg1LTAuMDc1LDguMDUxLTMuNjgzYTMzLjc2NywzMy43NjcsMCwwLDAsLjc1Ni05LjQwNiw3LjE2Miw3LjE2MiwwLDAsMCwzLjM4LS40NUM3MTMuOTYyLDY0MS4xNDMsNzEzLjcwNyw2MzkuNCw3MTMuNjE4LDYzOC4xOVptLTg4Ljc0LDEuNjEzYy0wLjEtLjkxNCwwLTEuOTQyLTAuMDA2LTIuODE5LTAuMDA2LS41NDktMC4wMjEtMS4xLTAuMDE5LTEuNjQ5YTEuNDU4LDEuNDU4LDAsMCwwLS4wNTMtMC44ODksOC4wNiw4LjA2LDAsMCwxLDEuNC0uMDI4YzAuMzM1LS4wMDkuNjcxLDAsMS4wMDYsMC4wMDktMC4wNDYsMS43NzYtLjExMSwzLjYzNi0wLjE0Myw1LjUwOUE5LjQ0Niw5LjQ0NiwwLDAsMSw2MjQuODc4LDYzOS44Wm01LjA1NywxMC4yNjNhMjcuNDksMjcuNDksMCwwLDEtLjMxNS00Ljk5M2MtMC4yMjUtNC4zMy0uMzQxLTguNjY3LTAuMzA4LTEzLDAuMDE5LTIuNTQ1LS4yNy01LjU4OS4zMzYtOC4wNzgsMC43MTEtMi45MTYsMy41Ny0yLjU4NSw2LjM0OC0yLjY0My0wLjA4Nyw0Ljc3NS4zNyw5LjY2NiwwLjI3NiwxNC4zNzgtMC4xMTUsNS44LS40MzYsMTEuOTI1LTAuMiwxNy44MjFDNjMyLjgyNCw2NTMuNSw2MzAuODM0LDY1My42ODQsNjI5LjkzNSw2NTAuMDY2Wm0yMC45MDUsNS43ODdjLTAuMTQ5LDIuMjIxLjA4NCwzLjgwNy0yLjI4NSw0LjM0OGEyMi40NTUsMjIuNDU1LDAsMCwxLTQuNjE1LDBjLTIuNTEzLS4wMzUtNC45LTEuMTM0LTUuNjEzLTMuNzMxLTAuNTE2LTEuODc3LjA2Ny00LjY5MiwwLjA0OC02LjY1Ny0wLjA0Ni00LjctLjEyOC05LjM4NS0wLjAzNS0xNC4wODQsMC4wNjItMy4xMDYtLjAzNS02LjItMC4wODctOS4zMDYtMC4wNDItMi40NTYuMTY4LTQuOSwwLjE0NC03LjM1OC0wLjA0LTQuMDM3LDIuNy00Ljk2NCw2LjQ0My00Ljk1OGE2LjUxLDYuNTEsMCwwLDEsNS4xODksMi41NDdjMC42LDAuOTMyLjMwNiwzLjIwNiwwLjM2NSw0LjM2NiwwLjEyMiwyLjQuMTcxLDQuODA2LDAuMjQzLDcuMjA5LDAuMTM3LDQuNi4yNDMsOS4yMDUsMC4yOTIsMTMuODFDNjUwLjk3Nyw2NDYuNjE5LDY1MS4xNDYsNjUxLjI3Nyw2NTAuODQsNjU1Ljg1M1ptMi4xNDMtMTUuOTEycS0wLjAxOS0yLjY3Mi0uMDU0LTUuMzVjNC42NzMtLjE3OCw5LjM3NS0wLjIwOCwxNC4wNDgtMC4yNjMsNS40NDUtLjA2NCwxMS4yNDEuNTU5LDE2LjY2LDAuMTJxLTAuMDMxLDIuNjczLS4wNjMsNS4zNEM2NzMuNDIxLDY0MC4zMjMsNjYzLjE1Nyw2MzkuODIsNjUyLjk4Myw2MzkuOTQxWm00NS4zMjYtMTMuNzgzYy0wLjA3OCwzLjEtLjE0OSw2LjItMC4wODcsOS4zMDYsMC4wODcsNC40LjAyNiw4Ljc5NC0uMDI2LDEzLjItMC4wNTcsNC44NTksMS40NCwxMS4xMzgtNS41MTYsMTEuMjQzLTEuMTYuMDE3LTMuMzE1LDAuNDQxLTQuNDE0LS4wNDMtMy4xMTItMS4zNjctMi41NDktMy43NDktMi42LTYuMjU4LTAuMDg3LTQuMzM4LS4wOTEtOC42NzQtMC4wMzUtMTMuMDEyLDAuMDU4LTQuNTEyLjE3Mi05LjAyMiwwLjMxNi0xMy41MywwLjE1NC00Ljg3LTEuMzIyLTEzLjI3MSw1Ljc3Mi0xMy4yMTksNC4yMTUsMC4wMzEsNS44MzIsMS40LDYuNTI2LDUuNzgxQTM2Ljc1MywzNi43NTMsMCwwLDEsNjk4LjMwOSw2MjYuMTU4Wm04LjU4MSwxOS4yNjlhMjIuMjU1LDIyLjI1NSwwLDAsMS0uMjU1LDQuNTU4Yy0wLjg4OSwzLjQzNy0zLjA2LDMuMjUxLTYuMTM4LDMuMy0wLjA0Mi0yLjE3Ny0uMjM1LTQuNC0wLjItNi40MTIsMC4wNTctMy44MDguMDcyLTcuNiwwLTExLjQxLTAuMDk0LTQuNzguMjU4LTkuNiwwLjExNC0xNC4zODRhMTcuMzA3LDE3LjMwNywwLDAsMSwzLjgzNi4zM2MyLjMwNiwwLjYyNSwyLjM1Ljg0OSwyLjU4OCwzLjQzNiwwLjI5NCwzLjIuMDczLDYuNTQzLDAuMTE0LDkuNzUzQzcwNi45ODgsNjM4LjIwOCw3MDcuMDE3LDY0MS44Miw3MDYuODksNjQ1LjQyN1ptMi4zMjgtNS4zMDZjLTAuMDgzLTEuOTEzLS4xODctMy43OS0wLjIwOS01LjUyMiwwLS4xMTMsMC0wLjIyNC0wLjAwNi0wLjMzOCwwLjQ3NywwLC45NTMsMCwxLjQzLjAyMSwwLjcsMC4wMjYuNzEyLS4xMjIsMC45MiwwLjQxNmE2LjQyMiw2LjQyMiwwLDAsMSwuMDI5LDEuNjMxYzAuMDMzLDAuNTg0LjExNCwxLjE2MywwLjE2LDEuNzQ2LDAuMDM3LDAuNDcxLjA2LDAuOTQ0LDAuMDU1LDEuNDE2YTMuODg5LDMuODg5LDAsMCwwLS4wMjYuNSwwLjYxMSwwLjYxMSwwLDAsMS0uMjEyLjA1N0M3MTAuNjQyLDY0MC4wNCw3MDkuOTMyLDY0MC4xMDUsNzA5LjIxOCw2NDAuMTIxWm0tNjguNy0yMS4wNzRjLTAuOTg2LDIuMzM0LS42NzgsNS4yODEtMC4zNzYsNy43MjcsMC4xNiwxLjI5MiwyLjIzLDEuMzA2LDIuMDY4LDAtMC4yODEtMi4yNzQtLjYxNC01LjAxNS4zLTcuMTgzQzY0My4wMiw2MTguMzc4LDY0MS4wMiw2MTcuODQ5LDY0MC41MTQsNjE5LjA0N1ptMi44NTUtMy4wM2ExLjAyMywxLjAyMywwLDAsMCwwLDIuMDQ1QTEuMDIzLDEuMDIzLDAsMCwwLDY0My4zNjksNjE2LjAxN1ptNDUuMDg5LDIuMDk0YTcuNTI0LDcuNTI0LDAsMCwwLS45MzIsMy42LDIyLjc3MSwyMi43NzEsMCwwLDAtLjEyNyw0LjQxNGMwLjExMSwxLjMsMi4xOCwxLjMxNCwyLjA2OCwwYTIxLjg2MSwyMS44NjEsMCwwLDEsLjA1NS0zLjY3MmMwLjA4NS0xLC4wODctMi40NjcuNzIxLTMuMzE0QzY5MS4wMzYsNjE4LjA4NCw2ODkuMjQyLDYxNy4wNjIsNjg4LjQ1OCw2MTguMTExWm0yLjk0MS0yLjYxN2ExLjAyMywxLjAyMywwLDAsMCwwLDIuMDQ1QTEuMDIzLDEuMDIzLDAsMCwwLDY5MS40LDYxNS40OTRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjIyLjY4OCAtNjExLjc4MSkiLz4KPC9zdmc+Cg==" alt="" class="mCS_img_loaded"></span>
+								<img src="images/icons/Experiencias_Icon.png" alt="">
 							</div>
 
 							<div class="price">Experiencia</div>
@@ -348,7 +353,7 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 						<div class="side-text"></div>
 						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;">
 							<div class="icon-box">
-								<span class="icon"><img data-savepage-currentsrc="#images/icons/price-2-icon.svg" data-savepage-src="images/icons/price-2-icon.svg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MC44NzUiIGhlaWdodD0iNjUuNjI1IiB2aWV3Qm94PSIwIDAgOTAuODc1IDY1LjYyNSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgICAgb3BhY2l0eTogMC43OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0icHJpY2UtMi1pY29uLnN2ZyIgY2xhc3M9ImNscy0xIiBkPSJNODY0LjQ1Niw2NTguN2MtMC4zMTYtMS42MzUtLjg2Ni0zLjIwNS0yLjUzNC0zLjlhOS44NDcsOS44NDcsMCwwLDAtMy40MjYtLjRjLTEuNjA3LS4wNTQtMy4yMDYtMC4wODItNC44MTEtMC4wMjEtMC4zNzktMS4wMzUtLjc4OC0yLjA1OS0xLjE2LTMuMS0xLjY3Mi00LjY2Mi0zLjMyNS05LjM1Mi00LjYzOC0xNC4xMjgtMS4xMzQtNC4xMjQtMi44MzEtOC4yOC0zLjc1LTEyLjQyNiwzLjE2MS0uMzQ4LDYuMzIxLTAuNyw5LjQ3NC0xLjEwOSwzLjAzOC0uNCw4LjMzOC0wLjE2OCw4LjAzOC00LjI2MS0wLjI2My0zLjU4Mi0yLjExMy00LjMwOC00LjQ4NC00LjIzMS0wLjc2LTIuOTQxLTIuNTMtMTEuMjg1LTYuMjA2LTEwLjktMi4yMjcuMjI5LTUuNjYyLDMuNzIyLTcuNDksNC45YTExNS4zMzgsMTE1LjMzOCwwLDAsMC0xMS41MTEsOC4xNzYsMC45OTMsMC45OTMsMCwwLDAtLjIyOC4yODhjLTEuMDIxLjA4NS0yLjA0NiwwLjE2Ny0zLjA2NSwwLjI1OC04LjIuNzQ0LTE2LjQzNiwxLjQyOC0yNC42MTYsMi4zNjMtMy4zOTEuMzg3LTcuOCwwLjIyNy03LjMzNSw0LjU0NnMzLjc5MiwzLjk5MSw3LjI4LDMuODExcTEzLjQ1OS0uNjksMjYuODM4LTIuMzI2YTAuOTMyLDAuOTMyLDAsMCwwLC4wMzMuMjJjMy40MjIsOS4yNjksNi42LDE4LjYzMiw5LjcxMSwyOC4wMDgtMjAuMS4zMTEtNDAuMjQ5LS41ODYtNjAuMzE1LDEtNS40MjguNDI4LTcuMDY1LDEuMzgzLTYuMzI2LDcuMTY5LDAuNDYyLDMuNjEsMi4zNzMsMy45MTUsNS45MTcsNCwwLjgwOSwwLjAyLDEuNjE4LjAyNCwyLjQyNiwwLjA0M2ExLjA0MiwxLjA0MiwwLDAsMC0uMDkxLjI5NGMtMC40LDMuODQzLDUuMTM4LDIuNzQzLDcuNTIsMi42NzYsMS4zNTQtLjAzOCwzLjY2Ni4zNzIsNC44ODktMC4yNjlhMi43MjgsMi43MjgsMCwwLDAsMS4wODItMi40NjhjMTYuMjc1LDAuMTg2LDMyLjU2Mi4xMDgsNDguODMsMC4yMWE0Ljk3OSw0Ljk3OSwwLDAsMCwxLjMsMS42MjVjMi4wNTQsMS41LDkuMjY1LDEuMzQzLDExLjE3Ny4xNjlhMi4xODIsMi4xODIsMCwwLDAsMS4xNjItMi41NmMyLjAzMS0uMDgyLDMuODYyLTAuMjkyLDUuMjc3LTIuMDQ1QTYuNDUyLDYuNDUyLDAsMCwwLDg2NC40NTYsNjU4LjdabS0xNS4wMDgtNTEuMDU0YzAuMjI3LS4xNiwxLjQxNC0xLjMzOCwxLjc0Ny0xLjI2NiwwLjU5LDAuMTI1LDEuMTQzLDEuOTMyLDEuNDYxLDIuNTQ0YTMyLjg0MiwzMi44NDIsMCwwLDEsMi40MTMsNi40MTZjLTAuNzY5LjEwOS0xLjU1OSwwLjIzOS0yLjM0MSwwLjMzNC01Ljc2My43MDctMTEuNiwxLjE1My0xNy40MTMsMS42MkM4MzkuODQzLDYxMy44MTYsODQ0Ljc2Nyw2MTAuOTMsODQ5LjQ0OCw2MDcuNjQ4Wm0tNTAuNSwxNy4yNzJjLTAuODIyLTMuNDI0LDExLjUxMy0zLjIyMiwxNC4xNzUtMy40OTQsNS40ODQtLjU1NywxMC45NjUtMS4xMDcsMTYuNDU2LTEuNjA1LDQuODgtLjQ0NSw5LjcyNC0xLjE5NCwxNC42MjQtMS40MjQsMi4yNzctLjEwNiw0LjUzNC0wLjIyMiw2LjgtMC40NzMsMS4zMTYtLjE0NSw2LjUtMS41ODEsNy43MTctMC42MSwzLjExNSwyLjQ4NS0yLjM1OSwzLjg4OC0zLjgzNSw0LjEtMi43MjcuMzktNS40NjgsMC43LTguMjA1LDEtNS4wNDQuNTY3LTEwLjA5MSwxLjA4NC0xNS4xMjgsMS43cS04LjQsMS4wMzktMTYuODM0LDEuNzE1QzgxMS44MjEsNjI2LjA2Myw3OTkuNzQsNjI4LjIwNiw3OTguOTUyLDYyNC45MlptLTYuMjYxLDQyLjYwOWEyNC41NDIsMjQuNTQyLDAsMCwxLTIuOTg0LjA4NmMtMC42NzguMDE5LTUuNTc2LDAuNTQ5LTUuNDU0LS42MzJhMC45NDcsMC45NDcsMCwwLDAtLjAyNy0wLjI2MWMzLjEzNCwwLjA2NSw2LjI2OC4xMjYsOS40LDAuMTY1Qzc5My42MTEsNjY3LjM2LDc5My40MDYsNjY3LjQxNSw3OTIuNjkxLDY2Ny41MjlabS01LjYzNy0yLjg1N2E3MS42MTQsNzEuNjE0LDAsMCwxLTgtLjA4Yy0zLjA1NS0uMzgtMi45ODQtMC41NzgtMy4xMzktMi44NTQtMC4xMjctMS44NTgtLjI0MS0yLjcxLDEuMjUxLTMuNjg0LDIuNzI3LTEuNzgyLDkuODQyLTEsMTMuMTUyLTEuMTM5LDE2Ljk3MS0uNzIyLDMzLjk2My0wLjExNiw1MC45NDMtMC40LDAuMTU0LDAuNDY2LjMxNSwwLjkzLDAuNDY5LDEuNCwwLjU2MiwxLjcsMS4wMjgsNC42ODUsMS44NzQsNy4xNzFRODE1LjMyOSw2NjQuOSw3ODcuMDU0LDY2NC42NzJabTYzLjQyOCwyLjY5NWMtMy4xLS4yOTMtMy44OS0xLjItNC43NzctMy45NDItMC44OTItMi43NjMtMS44MTQtNS41MTctMi43MzItOC4yN2EwLjgxOCwwLjgxOCwwLDAsMC0uMDM2LTAuMTA5Yy0wLjQxNC0xLjI0NS0uODE2LTIuNDk0LTEuMjM0LTMuNzM4LTIuODQzLTguNDYyLTUuNzIzLTE2LjkxNy04LjgxNC0yNS4yOTMsMy4wNjYtLjM2NSw2LjEzNC0wLjcsOS4yLTEuMDRhMC45ODIsMC45ODIsMCwwLDAsMCwuMTA4YzAuNzIyLDMuMzUyLDIuMyw2LjQ4LDMuMDg4LDkuODM2LDAuOCwzLjQyNiwxLjg4LDYuNzg3LDIuOTkyLDEwLjEyNSwxLjIwOSwzLjYyOCwyLjUsNy4yMjYsMy44MjksMTAuODEyYTAsMCwwLDAsMCwwLDBjMC4wOTMsMC4yNTMuMTgzLDAuNTA3LDAuMjc2LDAuNzYsMC44MTUsMi4xOTUsMy43NjYsNi44NzgsMy41MTEsOS4xODVDODU1LjU4LDY2Ny43MjcsODUyLjM0OCw2NjcuNTQ0LDg1MC40ODIsNjY3LjM2N1ptMTEuNjM0LTQuNzQ2Yy0xLjA2MywxLjc1Ni0yLjg3NSwxLjY3MS00LjY4MywxLjcyNy0wLjA2Mi0uMTUxLTAuMTI1LTAuMy0wLjE4NS0wLjQ1My0wLjk2OS0yLjQ4LTEuODc1LTQuOTg1LTIuOC03LjQ4MSwxLjM1LS4wMjYsMi43LTAuMDA4LDQuMDUxLjAzOSwxLjgyNCwwLjA2MiwzLjIzMS0uMDcxLDMuNzc5LDEuODkyQTUuMzc4LDUuMzc4LDAsMCwxLDg2Mi4xMTYsNjYyLjYyMVpNODQwLjg1Nyw2MzIuNzVjLTAuNDQtMS4yMzMtMi40MzctLjctMS45OTIuNTQzLDMuMDYsOC41NzIsNS43MiwxNy4yNzgsOC45MjEsMjUuOCwwLjQ2LDEuMjIzLDIuNDU4LjY5NCwxLjk5My0uNTQyQzg0Ni41NzcsNjUwLjAyOSw4NDMuOTE3LDY0MS4zMjIsODQwLjg1Nyw2MzIuNzVabS0yNi4yNDIsNS43MjVhMS4wMjIsMS4wMjIsMCwwLDAsMC0yLjA0NGMtNS4yMTcsMC0xMC40MzEtLjItMTUuNjQ4LTAuMjA1YTEuMDIzLDEuMDIzLDAsMCwwLDAsMi4wNDZDODA0LjE4NCw2MzguMjgxLDgwOS40LDYzOC40NzgsODE0LjYxNSw2MzguNDc1Wm0tMjUuOTMzLS4xYzEuMTkxLDAuMDIsMi4zODItLjAxOSwzLjU3MywwYTEuMDIyLDEuMDIyLDAsMCwwLDAtMi4wNDRjLTEuMTkxLS4wMTktMi4zODIuMDIxLTMuNTczLDBBMS4wMjIsMS4wMjIsMCwwLDAsNzg4LjY4Miw2MzguMzczWm0tMC40MjcsOC41OTRjNy41LS40MTcsMTUuMTE0LjAyOCwyMi42MzctMC4xMjNhMS4wMjMsMS4wMjMsMCwwLDAsMC0yLjA0NWMtNy41MjMuMTUzLTE1LjEzNi0uMjkzLTIyLjYzNywwLjEyNUM3ODYuOTMzLDY0NSw3ODYuOTI0LDY0Ny4wNDEsNzg4LjI1NSw2NDYuOTY3Wm0zNy41ODgsMC4wODhjMS4zMjYsMC4xLDEuMzE5LTEuOTQzLDAtMi4wNDQtMi45ODMtLjIyNy01Ljk3NC0wLjAxNy04Ljk2MS0wLjA1NWExLjAyMywxLjAyMywwLDAsMCwwLDIuMDQ1QzgxOS44NjksNjQ3LjAzOCw4MjIuODYsNjQ2LjgyOSw4MjUuODQzLDY0Ny4wNTVabS00Ni44NzMtLjA3NGEyMS41OTIsMjEuNTkyLDAsMCwxLDMuOCwwYzEuMzI0LDAuMTE2LDEuMzE2LTEuOTI3LDAtMi4wNDVhMjEuNTkyLDIxLjU5MiwwLDAsMC0zLjgsMEM3NzcuNjU2LDY0NS4wNTMsNzc3LjY0NCw2NDcuMSw3NzguOTcsNjQ2Ljk4MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NzMuNzgxIC02MDQuMjE5KSIvPgo8L3N2Zz4K" alt="" class="mCS_img_loaded"></span>
+								<img src="images/icons/Asesoramiento_Icon.png" alt="">
 							</div>
 							
 							<div class="price">Personalización </div>
@@ -364,7 +369,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 						<div class="side-text"></div>
 						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0ms; animation-name: none;">
 							<div class="icon-box">
-								<span class="icon"><img data-savepage-currentsrc="#images/icons/price-3-icon.svg" data-savepage-src="images/icons/price-3-icon.svg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4Ni44MDkiIGhlaWdodD0iNzQuOTY4IiB2aWV3Qm94PSIwIDAgODYuODA5IDc0Ljk2OCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgICAgb3BhY2l0eTogMC43OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0icHJpY2UtMy1pY29uLnN2ZyIgY2xhc3M9ImNscy0xIiBkPSJNOTk5LjA5MSw2NDAuNzIxYy01Ljk0MS03LjM2OC0yMS41NjQtOC42MTktMjUuNTg5LjdhMTUuNDgzLDE1LjQ4MywwLDAsMC03LjQzOC01LjMyNGMtNy4xOS0yLjUwNi0xMy45NjctLjUxNi0xOS4xMTUsNC40MTksMC4wMjEtLjM1Mi4wNy0wLjY4OCwwLjA3LTEuMDUzLDAtNi4xNzktLjE4MS0xMy4zNTcsMi4xLTE5LjI5YTkuOTg3LDkuOTg3LDAsMCwwLDYuNzgzLDIuMjkyYzUuMDU1LS4yMjksOS44MzYtMC42MzUsMTEuODY0LTUuOTQyLDEuOS00Ljk3NS0uMy0xMC43MzUtMy44LTE0LjQzMi0yLjQ2Ny0yLjYwOS0zLjM5NS0yLjY3OS02Ljk3LTIuNDczYTg5LjYxMSw4OS42MTEsMCwwLDAtMTAuNTM3LDFjLTUuODIxLDEuMDMyLTEwLjY0OCw5Ljg2Mi0xMy40NDgsMTQuNTg2LTguMzMzLDE0LjA1Ny0xNi4wMDYsMjkuNS0xNy4yMzksNDUuOTY4YTEuMDIyLDEuMDIyLDAsMCwwLC41MTIuODgyYzIyLjA0MiwxNC4zNTIsNTQuNiwxNy41LDc3LjY0MywzLjI2MUMxMDAyLjMxLDY2MC4xMzgsMTAwNS43MSw2NDguOTMsOTk5LjA5MSw2NDAuNzIxWk05OTIuMiw2NjMuOTM0Yy0xMi4wNTksNi45NjEtMjYuODczLDkuMjg1LTQwLjY0Nyw4LjFhNzYuMzMyLDc2LjMzMiwwLDAsMS0yMC41NDYtNC42ODksNjkuMzE0LDY5LjMxNCwwLDAsMS0xMC4zNjktNC45NzdjLTQuMi0yLjQ2NS0yLjE4NC03LjU1My0xLjItMTEuNjE0YTEwMy45MzMsMTAzLjkzMywwLDAsMSw4LjktMjIuNTgxYzMuNi03LjA0NCw3LjI1OS0xNC4yMzMsMTIuMzU4LTIwLjM1MywxLjQ3Mi0xLjc2NiwyLjg3NC0zLjU2Miw0Ljk1Ny00LjU4MywyLjYwOS0xLjI3OSw1LjkzNy0xLjI0Miw4LjgyMi0xLjQyNywyLjYxNC0uMTY3LDUuMjcyLTAuNTYzLDcuNTIsMS4yYTEyLjkzMiwxMi45MzIsMCwwLDEsMy45MTYsNi41MTFjMC43NzYsMi45NjcuNTQsNy4xNzUtMi4xNzksOS4xNTctMS45MTYsMS40LTQuNTc4LDEuNDQ5LTYuOTE0LDEuNjU5YTExLjYyNywxMS42MjcsMCwwLDEtMi4xNDEuMThjLTEuODU5LS4yMjQtNS4xNDEtMi4yNTYtMy40NzktNC41NjIsMC43MS0uOTg3LDMuNzI2LTEuNDYyLDQuODY3LTEuNDNhMS4wMjIsMS4wMjIsMCwwLDAsMC0yLjA0NGMtMi40OTItLjA2Ni03Ljc5MSwxLjM4OC04LjEzNiw0LjQ5MWEzLjk5NCwzLjk5NCwwLDAsMC0uMDEuNzcxYy0yLjE3NCw0LjYtMi41NTMsOS44NS0yLjc4MSwxNC44NjMtMC4xMjUsMi43NC4wNTIsNS41MzMtLjE1NSw4LjI1OS0wLjM4Niw1LjA4My0zLjk0OSw5LjE0MS03LjQ4OCwxMi42NjFhMS4wMjksMS4wMjksMCwwLDAsMS40NjIsMS40NDZjMy40My0zLjQxMyw2LjIzLTYuNzQ3LDcuNDI5LTEwLjkyOWEwLjkwOCwwLjkwOCwwLDAsMCwuMjQ0LTAuMTkyYzQuOS01LjgxMywxMS45LTguNSwxOS4yODMtNS42LDIuNzQ0LDEuMDc4LDUuODI5LDMuMTc4LDYuODQ0LDYuMDg4LDAuMywwLjg3MSwxLjc5MiwxLjA2OCwxLjk5MywwLDIuMTgxLTExLjU2OCwyMC4wMS04LjM4NywyNC4xNzcuMTI3QzEwMDIuNjcsNjUyLjEsOTk5LjI0Niw2NTkuODY2LDk5Mi4yLDY2My45MzRabS0yMi41MTMtOS4wODJjLTMuMzEyLDIuODkzLTYuMzIzLDQuMTI2LTEwLjc0MiwzLjg1Ni00LjIyNy0uMjU4LTguMTE5LTAuODQ4LTExLjY3Ny0zLjIzNC0xLjEtLjc0LTIuMTM5LDEuMDMtMS4wNDMsMS43NjYsNC4xOSwyLjgwOSw5LjA3OCwzLjQzOSwxNC4wNTcsMy41NzksNC40LDAuMTI1LDcuNi0xLjY2NywxMC44NjYtNC41MjFDOTcyLjE0NSw2NTUuNDI1LDk3MC42NzksNjUzLjk4NCw5NjkuNjg1LDY1NC44NTJabS0xOS4zMTYtNy44MzVjMC45NDQtMS44MzcsMi43MDYtMi45MDUsNC40MzgtMy45MzZhMS4wMjUsMS4wMjUsMCwwLDAtMS4wNDMtMS43NjRjLTIuMDI2LDEuMi00LjA3NywyLjUyNC01LjE3OSw0LjY2OUM5NDcuOTg0LDY0Ny4xNTcsOTQ5Ljc2Nyw2NDguMTkxLDk1MC4zNjksNjQ3LjAxN1ptNi43MTctNWExLjAyMiwxLjAyMiwwLDAsMCwwLTIuMDQ0QTEuMDIyLDEuMDIyLDAsMCwwLDk1Ny4wODYsNjQyLjAxOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05MTUuNzgxIC01OTkuNTYzKSIvPgo8L3N2Zz4K" alt="" class="mCS_img_loaded"></span>
+								<img src="images/icons/Productos_Icon.png" alt="">
+
 							</div>
 							
 							<div class="price">Variedad </div>
@@ -385,7 +391,10 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 		</section>
 
 
-		<img src="images/clientes.png" alt="" style="width: 100%; height:auto" class="hidemobile">
+<!-- 		<img src="images/clientes.png" alt="" style="width: 100%; height:auto" class="hidemobile"> -->
+
+
+
 		<!-- End Pricing Section -->
 
 		<!-- Testimonial Section -->
@@ -406,58 +415,49 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 		</section> -->
 		<!-- End Testimonial Section -->
 		<div style="background-color: #fff;">
-<!-- 
+
 					
-<div class="slider" style="margin-top: 100px">
-	<div class="slide-track">
+<div class="slider" >
+	<div class="slide-track" style="margin-top: 30px; zoom: 120%;">
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/acasalud.png"   alt="" />
+		<img src="images/clientes/1.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/obarrio.png"   alt="" />
+		<img src="images/clientes/2.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/thonet.png"   alt="" />
+		<img src="images/clientes/3.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/falabella.png"   alt="" />
+		<img src="images/clientes/4.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/cabify.png"   alt="" />
+		<img src="images/clientes/5.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/gama.png"   alt="" />
+		<img src="images/clientes/6.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/pointer.png"   alt="" />
+		<img src="images/clientes/7.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/plavicon.png"   alt="" />
+		<img src="images/clientes/8.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/kiddy.png"   alt="" />
+		<img src="images/clientes/9.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/asteroptica.png"   alt="" />
+		<img src="images/clientes/10.png"   alt="" />
 	  </div>
 	  <div class="slide">
-		<img src="https://mercodigital.com/images/followme.png"  alt="" />
-	  </div>
-	  <div class="slide">
-		<img src="https://mercodigital.com/images/ledesma.png"   alt="" />
-	  </div>
-	  <div class="slide">
-		<img src="https://mercodigital.com/images/telekino.png"   alt="" />
-	  </div>
-	  <div class="slide">
-		<img src="https://mercodigital.com/images/multipoint.png"   alt="" />
+		<img src="images/clientes/11.png"  alt="" />
 	  </div>
 	</div>
-  </div> -->
+  </div> 
 		<!-- Services Section -->
 		<a name="services"></a>
 
-		<section class="services-section">
+		<section class="services-section" style="padding-top: 100px;">
 			<div class="outer-container">
 				<div class="clearfix">
 					
@@ -471,8 +471,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<div class="overlay-box">
 									<div class="overlay-inner">
 										<div class="content">
-<!-- 											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >MÁQUINAS</a></h4>
- -->										</div>
+ 											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >MÁQUINAS</a></h4>
+ 										</div>
 									</div>
 								</div>
 							</div>
@@ -489,8 +489,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<div class="overlay-box">
 									<div class="overlay-inner">
 										<div class="content">
-<!-- 											<h4 class="txt"><a data-savepage-href="body-builder.html" href="#maquinas"   class="txt">PRODUCTOS</a></h4>
- -->										</div>
+											<h4 class="txt"><a data-savepage-href="body-builder.html" href="#maquinas"   class="txt">PRODUCTOS</a></h4>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -508,8 +508,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<div class="overlay-box">
 									<div class="overlay-inner">
 										<div class="content">
-<!-- 											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >DISTRIBUIDORES</a></h4>
- -->										</div>
+											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >DISTRIBUIDORES</a></h4>
+										</div>
 									</div>
 								</div>
 								
@@ -528,8 +528,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<div class="overlay-box">
 									<div class="overlay-inner">
 										<div class="content">
-<!-- 											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >SOLUCIONES PERSONALIZADAS</a></h4>
- -->										</div>
+											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >SOLUCIONES PERSONALIZADAS</a></h4>
+										</div>
 									</div>
 								</div>
 								
@@ -547,8 +547,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<div class="overlay-box">
 									<div class="overlay-inner">
 										<div class="content">
-<!-- 											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >NUEVOS PROYECTOS</a></h4>
- -->										</div>
+											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >NUEVOS PROYECTOS</a></h4>
+										</div>
 									</div>
 								</div>
 								
@@ -566,8 +566,8 @@ bicicleta mountain bike rodado, donde comprar pesas y mancuernas, multigimnasio 
 								<div class="overlay-box">
 									<div class="overlay-inner">
 										<div class="content">
-<!-- 											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >HOMOLOGACION FAB</a></h4>
- -->										</div>
+											<h4><a data-savepage-href="body-builder.html" href="#maquinas"  >HOMOLOGACION FAB</a></h4>
+										</div>
 									</div>
 								</div>
 								
