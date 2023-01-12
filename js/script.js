@@ -245,7 +245,7 @@
 
 			$sync2
 				.owlCarousel({
-					loop:false,
+					loop:true,
 					margin: 20,
 					items: 1,
 					nav: true,
