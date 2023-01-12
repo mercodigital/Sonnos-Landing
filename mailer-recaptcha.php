@@ -3,7 +3,7 @@
  ini_set('display_errors', 1);
  
 
-        $your_email = 'contacto@sonnosdeporte.com';
+        $your_email = 'Nahuel.l@sonnosweb.com';
 		$encopia = 'leads@mercodigital.com';
 		$encopia = 'soporte@mercodigital.com';
 		$captcha= $_POST['g-recaptcha-response'];

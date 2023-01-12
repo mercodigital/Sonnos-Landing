@@ -222,7 +222,7 @@
 		var $sync1 = $(".shop-page .image-carousel"),
 			$sync2 = $(".shop-page .thumbs-carousel"),
 			flag = false,
-			duration = 500;
+			duration = 1500;
 
 			$sync1
 				.owlCarousel({
@@ -232,8 +232,8 @@
 					nav: false,
 					navText: [ '<span class="icon fa fa-angle-left"></span>', '<span class="icon fa fa-angle-right"></span>' ],
 					dots: false,
-					autoplay: true,
-					autoplayTimeout: 5000
+					autoplay: false,
+					autoplayTimeout: 5000000000000000000000000
 				})
 				.on('changed.owl.carousel', function (e) {
 					if (!flag) {
@@ -245,14 +245,14 @@
 
 			$sync2
 				.owlCarousel({
-					loop:true,
+					loop:false,
 					margin: 20,
 					items: 1,
 					nav: true,
 					navText: [ '<span class="icon fa fa-angle-left"></span>', '<span class="icon fa fa-angle-right"></span>' ],
 					dots: false,
 					center: false,
-					autoplay: true,
+					autoplay: false,
 					autoplayTimeout: 5000,
 					responsive: {
 						0:{
