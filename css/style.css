@@ -110,7 +110,9 @@
 
  ***/
 @media (max-width: 1300px) {
-
+	.reverse {
+		flex-direction: column-reverse;
+	}
 	section {
 		padding:20px;
 
@@ -827,6 +829,9 @@ img{
 	max-width:100%;
 	height:auto;	
 }
+
+
+
 
 /*** 
 
