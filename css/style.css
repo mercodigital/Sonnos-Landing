@@ -850,7 +850,7 @@ img{
 }
 
 .sec-title h2 span{
-	color: transparent;
+	color: #ffffff;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #fff;
 }
@@ -858,7 +858,7 @@ img{
 .sec-title .text{
 	position: relative;
     color: #ffffff;
-	opacity:0.5;
+	opacity:1;
 	font-size:16px;
     font-weight: 400;
     line-height: 1.6em;
