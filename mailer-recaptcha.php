@@ -5,7 +5,6 @@
 
         $your_email = 'Nahuel.l@sonnosweb.com';
 		$encopia = 'leads@mercodigital.com';
-		$encopia = 'soporte@mercodigital.com';
 		$captcha= $_POST['g-recaptcha-response'];
 		
 		if(!$captcha){
